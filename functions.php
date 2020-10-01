@@ -30,15 +30,15 @@ add_theme_support( 'automatic-feed-links' );
 // allow custom logo image to be added from admin
 function themeslug_theme_customizer( $wp_customize ) {
 $wp_customize->add_section( 'themeslug_logo_section' , array(
-    'title'       => __( 'Logo', 'themeslug' ),
+    'title'       => __( 'Logo', 'wp-bootstrap' ),
     'priority'    => 30,
-    'description' => 'Upload a logo to replace the default site name and description in the header',
+    'description' => __( 'Upload a logo to replace the default site name and description in the header', 'wp-bootstrap' ),
 ) );
 
 $wp_customize->add_setting( 'themeslug_logo' );
 
 $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'themeslug_logo', array(
-    'label'    => __( 'Logo', 'themeslug' ),
+    'label'    => __( 'Logo', 'wp-bootstrap' ),
     'section'  => 'themeslug_logo_section',
     'settings' => 'themeslug_logo',
 ) ) );
